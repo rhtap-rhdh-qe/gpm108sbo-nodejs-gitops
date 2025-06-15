@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: gpm108sbo-nodejs-gitops
+  description: This is GitOps manifest for gpm108sbo-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=gpm108sbo-nodejs
+    backstage.io/kubernetes-id: gpm108sbo-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: gpm108sbo-nodejs
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:gpm108sbo-nodejs

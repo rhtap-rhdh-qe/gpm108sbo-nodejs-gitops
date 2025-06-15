@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: gpm108sbo-nodejs-repository
+spec:
+  url: https://github.com/rhtap-rhdh-qe/gpm108sbo-nodejs
